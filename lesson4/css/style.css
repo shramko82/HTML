@@ -160,6 +160,13 @@ body {
     padding: 0 15px;
 }
 
+.container .content {
+    width: 210px;
+    height: 100%;
+    float: left;
+    padding: 0 15px;
+}
+
 .container .news {
     width: 210px;
     height: 100%;
