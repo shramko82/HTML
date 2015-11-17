@@ -1,186 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
-    <title></title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        body {
-            background-image: url("images/sea.jpg");
-        }
-
-        .wrapper {
-            margin-bottom: 50px;
-            margin-left: 20%;
-            margin-right: 20%;
-            background-color: white;
-            box-shadow: 0 0 30px #969696;
-        }
-
-        .header-top {
-            height: 150px;
-        }
-
-        .header-bottom {
-            height: 100px;
-            background-image: url("images/holiday.jpg");
-            background-size: 100% 100%;
-
-        }
-
-        .header-top img.main-logo {
-            width: 30%;
-            height: 100%;
-            float: left;
-        }
-
-        .header .sidebar {
-            float: right;
-            width: 30%;
-            height: 100%;
-            margin: 20px;
-        }
-
-        .menu {
-            background-color: #2c2c2c;
-            padding-left: 50px;
-            list-style: none;
-        }
-
-        .menu a {
-            color: white;
-            text-decoration: none;
-            margin: 0;
-            display: block;
-            padding: 10px;
-        }
-
-        .menu li {
-            float: left; /* элементы списка делаем блочными и выстраиваем в ряд */
-            height: 40px; /* высоту лучше жестко указать, чтобы выпадающее меню появлялось в предсказуемом месте */
-            /*margin: 10px;*/
-            cursor: pointer;
-            position: relative; /* чтобы выпадающее меню позиционировалось относительно родителя */
-            z-index: 1;
-            /*background: #99CCCC;*/
-            /*padding: 10px;*/
-        }
-
-        .menu li ul {
-            display: none; /* скрываем выпадающе меню */
-            position: absolute; /* чтобы положение подменю не влияло на окружение и легко было позиционировать */
-            left: 0;
-            top: 40px; /* высоту лучше не делать большей высоты пункта меню первого уровня, иначе попасть на подменю будет проблематично */
-            margin: 0;
-            width: 300px;
-            background: #2c2c2c;
-            border: 1px solid #000;
-        }
-
-        .menu li ul li {
-            float: none;
-            display: block;
-            /*background: none;*/
-            /*border-bottom: 1px solid #CCC;*/
-        }
-
-        .menu li:hover ul {
-            display: block; /* при наведении на пункт меню первого уровня, показывем подменю */
-        }
-
-        li:hover {
-            background: #777;
-        }
-
-        .container {
-            background-color: white;
-            height: 700px;
-            overflow: hidden;
-        }
-
-        .container .info {
-            width: 30%;
-            height: 100%;
-            float: left;
-            background-color: #ddd;
-        }
-
-        .container .news {
-            width: 20%;
-            height: 100%;
-            float: right;
-            background-color: #ddd;
-        }
-
-        .clearfix:after {
-            content: '';
-            clear: both;
-            display: block;
-        }
-
-    </style>
+    <title>Asia holydays</title>
 </head>
 <body>
     <div class = 'wrapper'>
         <div class = 'header'>
             <div class = 'header-top clearfix'>
-
                 <a href="#">
                     <img class = "main-logo" src="images/logo.jpg">
                 </a>
 
-                <div class="sidebar">
+                <div class="header-right">
                     <div class = "contacts">
-                        CONTACTS<br>
-                        CONTACTS<br>
-                        CONTACTS<br>
-                        CONTACTS
+                        <p style="font-weight: bold">Наши контакты:</p>
+                        <p>+9-098-765-4321</p>
+                        <p>+9-0123-456-890</p>
+                        <p>info@asia-holidays.com</p>
                     </div>
                     <ul class = "flags">
-                        <li id = "kazakhstan">
+                        <li>
                             <a href="#">
-                                <img src="images/kazakhstan.jpg">
+                                <img src="images/india.jpg" alt="india">
+                                <p>Индия</p>
                             </a>
                         </li>
-                        <li id = "uzbekistan">
+                        <li>
                             <a href="#">
-                                <img src="images/uzbekistan.jpg">
+                                <img src="images/nepal.jpg" alt="nepal">
+                                <p>Непал</p>
                             </a>
                         </li>
-                        <li id = "turkmenistan">
+                        <li>
                             <a href="#">
-                                <img src="images/turkmenistan.jpg">
+                                <img src="images/tibet.jpg" alt="tibet">
+                                <p>Тибет</p>
                             </a>
                         </li>
-                        <li id = "australia">
+                        <li>
                             <a href="#">
-                                <img src="images/australia.jpg">
+                                <img src="images/bhutan.jpg" alt="bhutan">
+                                <p>Бутан</p>
                             </a>
                         </li>
-                        <li id = "georgia">
+                        <li>
                             <a href="#">
-                                <img src="images/georgia.jpg">
+                                <img src="images/sri-lanka.jpg" alt="sri-lanka">
+                                <p>Шри-Ланка</p>
                             </a>
                         </li>
-                        <li id = "brazil">
+                        <li>
                             <a href="#">
-                                <img src="images/brazil.jpg">
+                                <img src="images/maldives.jpg" alt="maldives">
+                                <p>Мальдивы</p>
                             </a>
                         </li>
-
                     </ul>
                 </div>
             </div>
-            <div class = 'header-bottom'></div>
+            <div class = 'photo'></div>
         </div>
-
         <ul class = 'menu clearfix'>
             <li><a href="#">Главная</a></li>
-            <li><a href="#">Путешествия </a>
+            <li><a href="#">Путешествия <span class="symbol">&#9660</span></a>
                 <ul>
                     <li><a href="#">Путешествие 1</a></li>
                     <li><a href="#">Путешествие 2</a></li>
@@ -189,14 +73,19 @@
                     <li><a href="#">Путешествие 5</a></li>
                 </ul>
             </li>
-            <li><a href="#">Услуги</a>
+            <li><a href="#">Услуги <span class="symbol">&#9660</span></a>
                 <ul>
                     <li><a href="#">Услуга 1</a></li>
                     <li><a href="#">Услуга 2</a></li>
                     <li><a href="#">Услуга 3</a></li>
                 </ul>
             </li>
-            <li><a href="#">Партнерам</a> </li>
+            <li><a href="#">Партнерам <span class="symbol">&#9660</span></a>
+                <ul>
+                    <li><a href="#">Партнерам 1</a></li>
+                    <li><a href="#">Партнерам 2</a></li>
+                </ul>
+            </li>
             <li><a href="#">Отзывы клиентов</a> </li>
             <li><a href="#">О нас</a> </li>
             <li><a href="#">Контакты</a> </li>
@@ -204,76 +93,48 @@
         </ul>
         <div class="container clearfix">
             <div class = "info">
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
-                INFORMATON INFORMATON INFORMATON INFORMATON INFORMATON
+                <p>Информация</p>
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
             </div>
             <div class = "news">
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
-                NEWS NEWS NEWS
+                <p>Новости</p>
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
             </div>
         </div>
+    </div>
+    <div class = "footer">
+        <p>Copyright(C) asia-holidays.com. 2010</p>
     </div>
 </body>
 </html>

@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-size: 100% 100%;
+    font-family: Tahoma, Arial;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    text-align: center;
+}
+
+.clearfix:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+body {
+    background-image: url(../images/background.jpg);
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1000px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.73);
+}
+
+.header-top {
+    height: 177px;
+}
+
+.header-top p {
+    color: rgba(18, 138, 167, 0.8);
+}
+
+.photo {
+    height: 240px;
+    background-image: url("../images/photo.jpg");
+    background-size: 100% 100%;
+}
+
+.main-logo {
+    height: 100%;
+    margin-left: 30px;
+    margin-top: 15px;
+    width: 275px;
+}
+
+.header-right {
+    float: right;
+    width: 340px;
+    height: 100%;
+    margin-right: 35px;
+}
+
+.contacts {
+    float: right;
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+.contacts p {
+    margin: 5px;
+}
+
+.flags {
+    float: right;
+    padding-top: 15px;
+}
+
+.flags li {
+    display: inline-block;
+    font-size: 10px;
+    margin: 2px;
+}
+
+.flags a:hover {
+    text-decoration: none;
+}
+
+
+.menu {
+    background-color: #2c2c2c;
+    list-style: none;
+    height: 30px;
+    width: 100%;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.menu .symbol {
+    font-size: 8px;
+    vertical-align: middle;
+}
+
+.menu li {
+    float: left; /* элементы списка делаем блочными и выстраиваем в ряд */
+    height: 30px; /* высоту лучше жестко указать, чтобы выпадающее меню появлялось в предсказуемом месте */
+    width: 140px;
+    cursor: pointer;
+    position: relative; /* чтобы выпадающее меню позиционировалось относительно родителя */
+}
+
+.menu li ul {
+    display: none; /* скрываем выпадающе меню */
+    position: absolute; /* чтобы положение подменю не влияло на окружение и легко было позиционировать */
+    left: 0;
+    top: 30px; /* высоту лучше не делать большей высоты пункта меню первого уровня, иначе попасть на подменю будет проблематично */
+    margin: 0;
+    width: 140px;
+    background: #2c2c2c;
+    border: 1px solid #000;
+}
+
+.menu li ul li {
+    float: none;
+    display: block;
+}
+
+.menu li:hover ul {
+    display: block;
+}
+
+.menu li:hover {
+    background: #777;
+}
+
+.container {
+    background-color: white;
+    height: 540px;
+    overflow: hidden;
+    text-align: justify;
+    font-size: 14px;
+    color: rgb(66, 76, 67);
+}
+
+.container p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.container .info {
+    width: 210px;
+    height: 100%;
+    float: left;
+    background-color: #ddd;
+    padding: 0 15px;
+}
+
+.container .news {
+    width: 210px;
+    height: 100%;
+    float: right;
+    background-color: #ddd;
+    padding: 0 15px;
+}
+
+.footer {
+    height: 34px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+    padding: 7px;
+}
+
+.footer p {
+    padding: 10px;
+}
+
